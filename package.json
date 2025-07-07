@@ -1,0 +1,35 @@
+{
+  "name": "hereisabreakdown-6c611d88",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "cycle": "git add . ; git commit -m 'cycle' ; git push origin main",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./env.d.ts"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.0",
+    "next": "15.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.12",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20.19.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vercel": "^44.2.12",
+    "wrangler": "^4.23.0"
+  },
+  "description": "GardenConnect is a frontend-only platform designed to simulate the experience of connecting local gardeners with homeowners seeking gardening advice and services. The application will feature a modern, eco-friendly design, emphasizing green and earthy tones to reflect the gardening theme. While the actual connection and transaction process will be simulated, the application will provide a clear, user-friendly interface for homeowners to describe their gardening needs and for gardeners to present their services.\n\nThe application's core functionality will be simulated using mock data and hardcoded scenarios, allowing users to navigate through a pretend gardening service marketplace. This will include user profiles, service listings, and a bidding system, all managed on the client-side without backend interaction.\n\nHere is a breakdown of the core features and components:\n*   **Pages:**\n  *   **Home:** An introductory page explaining the service and inviting users to either find a gardener or offer their gardening services.\n  *   **Profile Creation:** A page where users can create a profile, either as a homeowner or a gardener, with relevant information (e.g., location, services offered, or needed).\n  *   **Service Listings:** A page where gardeners can list their services, and homeowners can browse and filter these listings based on location, service type, and ratings.\n  *   **Bidding System:** A simulated system where gardeners can bid on listed gardening projects, and homeowners can review these bids and select a gardener.\n*   **Core Components:**\n  *   **`UserProfile`:** A component displaying a user's profile information, including location, services (for gardeners), or gardening needs (for homeowners).\n  *   **`ServiceListing`:** A component for gardeners to create and display their service offerings, including descriptions, prices, and testimonials.\n  *   **`BidComponent`:** A component where gardeners can submit bids for projects, including their proposed price and a brief message.\n  *   **`ProjectListing`:** A component for homeowners to list their gardening projects, including descriptions of the work needed and preferred completion dates.\n*   **Mock Data Structure:**\n  *   A hardcoded array of `users` with predefined profiles, services, and bids to simulate the platform's functionality: `[{ id: 1, name: 'John Doe', type: 'gardener', services: ['lawn care', 'planting'] }, { id: 2, name: 'Jane Smith', type: 'homeowner', needs: ['yard cleanup', 'garden design'] }]`."
+}
