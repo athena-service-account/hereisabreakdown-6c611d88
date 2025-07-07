@@ -1,14 +1,11 @@
 import Head from 'next/head';
 
-function Home() {
+export default function Home() {
   return (
-    <div className="container">
+    <div style={{ height: '100vh', backgroundColor: 'blue' }}>
       <Head>
-        <title>Home</title>
+        <title>Blue Background</title>
       </Head>
-      <h1>Centered Text</h1>
     </div>
   );
 }
-
-export default Home;
